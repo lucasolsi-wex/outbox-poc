@@ -18,7 +18,7 @@ func main() {
 		log.Fatalf("Failed to connect do MongoDB: %v", err)
 	}
 
-	producer, err := kafka2.NewProducer("outbox_kafka:9092")
+	producer, err := kafka2.NewProducer("localhost:9092")
 	if err != nil {
 		log.Fatalf("Failed to create Kafka producer: %v", err)
 	}
